@@ -1,0 +1,358 @@
+Introduction  -5
+    Prerequisites  -5 
+    What has Changed in the Fourth Edition?  -5
+    Our Teaching Philosophy  -4
+    How to Use This Book  -3
+    How This Book is Organized  -3
+    Style Choices  -1
+    Typographical Conventions  -1
+    Necessary Hardware and Software  -1
+1 A Simple iOS Application  1 
+    Creating an Xcode Project  2 
+    Model-View-Controller  4 
+    Designing Quiz  5 
+    Creating a View Controller  6 
+    Building an Interface  8 
+        Creating view objects  10 
+        Configuring view objects  11 
+        NIB files  13 
+        Making connections  14
+    Creating Model Objects  18 
+        Using code-completion  20
+    Pulling it all Together  21 
+        Implementing action methods  21 
+        Getting the view controller on the screen  22
+    Running on the Simulator  22 
+    Deploying an Application  23 
+    Application Icons  25 
+    Launch Images  27
+2 Objective-C  29 
+    Objects  29 
+    Using Instances  30 
+        Creating objects  30 
+        Sending messages  31 
+        Destroying objects  32
+    Beginning RandomItems  33 
+        Creating and populating an array  36 
+        Iterating over an array  37 
+        Format strings  38
+    Subclassing an Objective-C Class  38 
+        Creating an NSObject subclass  39 
+        Instance variables  41 
+        Accessing instance variables  42 
+        Class vs instance methods  47 
+        Overriding methods  48 
+        Initializers  49
+        Class methods  55
+        Testing your subclass  57
+    More on NSArray and NSMutableArray  58
+    Exceptions and Unrecognized Selectors  60
+    Challenges  62
+    Bronze Challenge: Bug Finding  62
+    Silver Challenge: Another Initializer  62
+    Gold Challenge: Another Class  63
+    Are You More Curious?  63
+    For the More Curious: Class Names  63
+    For the More Curious: #import and @import  64
+3 Managing Memory with ARC  65
+    The Stack  65
+    The Heap  65
+        ARC and memory management  66
+    Pointer Variables and Object Ownership  66
+        How objects lose owners  67
+        Ownership chains  69
+    Strong and Weak References  70
+    Properties  75
+        Declaring properties  75
+        Property attributes  78
+        Custom accessors with properties  81
+    For the More Curious: Property Synthesis  81
+    For the More Curious: Autorelease Pool and ARC History  83
+4 Views and the View Hierarchy  85
+    View Basics  86
+    The View Hierarchy  86
+    Subclassing UIView  88
+        Views and frames  89
+    Custom Drawing in drawRect:  94
+        Drawing a single circle  96
+        UIBezierPath  96
+        Using the developer documentation  97
+        Drawing concentric circles  102
+    More Developer Documentation  105
+    Bronze Challenge: Draw an Image  106
+    For the More Curious: Core Graphics  106
+    Gold Challenge: Shadows and Gradients  108
+5 Views: Redrawing and UIScrollView  111
+    The Run Loop and Redrawing Views  112
+    Class Extensions  114
+    Using UIScrollView  114
+        Panning and paging  117
+6 View Controllers  119
+    Subclassing UIViewController  120
+        The view of a view controller  121
+        Creating a view programmatically  121
+        Setting the root view controller  122
+    Another UIViewController  123
+        Creating a view in Interface Builder  124
+    UITabBarController  130
+        Tab bar items  132
+    UIViewController Initializers  134
+    Adding a Local Notification  135
+    Loaded and Appearing Views  136
+        Accessing subviews  137
+    Interacting with View Controllers and Their Views  138
+    Bronze Challenge: Another Tab  138
+    Silver Challenge: Controller Logic  138
+    For the More Curious: Key-Value Coding  138
+    For the More Curious: Retina Display  140
+7 Delegation and Text Input  143
+    Text Fields  143
+        UIResponder  144
+        Configuring the keyboard  145
+    Delegation  146
+    Protocols  148
+    Adding the Labels to the Screen  150
+    Motion Effects  151
+    Using the Debugger  151
+        Using breakpoints  152
+        Stepping through code  154
+    For the More Curious: main() and UIApplication  156
+    Silver Challenge: Pinch to Zoom  156
+8 UITableView and UITableViewController  159
+    Beginning the Homepwner Application  159
+    UITableViewController  160
+        Subclassing UITableViewController  161
+    UITableView’s Data Source  164
+        Creating BNRItemStore  165
+        Implementing data source methods  169
+    UITableViewCells  170
+        Creating and retrieving UITableViewCells  171
+        Reusing UITableViewCells  173
+    Code Snippet Library  174
+    Bronze Challenge: Sections  177
+    Silver Challenge: Constant Rows  177
+    Gold Challenge: Customizing the Table  177
+9 Editing UITableView  179
+    Editing Mode  179
+    Adding Rows  185
+    Deleting Rows  187
+    Moving Rows  188
+    Bronze Challenge: Renaming the Delete Button  190
+    Silver Challenge: Preventing Reordering  190
+    Gold Challenge: Really Preventing Reordering  190
+10 UINavigationController  191
+    UINavigationController  192
+    An Additional UIViewController  196
+    Navigating with UINavigationController  202
+        Pushing view controllers  202
+        Passing data between view controllers  203
+        Appearing and disappearing views  205
+    UINavigationBar  205
+    Bronze Challenge: Displaying a Number Pad  210
+    Silver Challenge: Dismissing a Number Pad  210
+    Gold Challenge: Pushing More View Controllers  210
+11 Camera  211
+    Displaying Images and UIImageView  212
+        Adding a camera button  213
+    Taking Pictures and UIImagePickerController  216
+        Setting the image picker’s sourceType  216
+        Setting the image picker’s delegate  218
+        Presenting the image picker modally  218
+        Saving the image  219
+    Creating BNRImageStore  220
+    NSDictionary  222
+    Creating and Using Keys  225
+    Wrapping up BNRImageStore  227
+    Dismissing the Keyboard  228
+    Bronze Challenge: Editing an Image  230
+    Silver Challenge: Removing an Image  230
+    Gold Challenge: Camera Overlay  230
+    For the More Curious: Navigating Implementation Files  230
+        #pragma mark  231
+    For the More Curious: Recording Video  232
+12 Touch Events and UIResponder  235
+    Touch Events  235
+    Creating the TouchTracker Application  236
+    Drawing with BNRDrawView  238
+    Turning Touches into Lines  240
+        Handling multiple touches  241
+    Bronze Challenge: Saving and Loading  245
+    Silver Challenge: Colors  245
+    Gold Challenge: Circles  245
+    For the More Curious: The Responder Chain  245
+    For the More Curious: UIControl  246
+13 UIGestureRecognizer and UIMenuController  249
+    UIGestureRecognizer Subclasses  250
+    Detecting Taps with UITapGestureRecognizer  250
+    Multiple Gesture Recognizers  252
+    UIMenuController  254
+    UILongPressGestureRecognizer  256
+    UIPanGestureRecognizer and Simultaneous Recognizers  257
+    For the More Curious: UIMenuController and UIResponderStandardEditActions  260
+    For the More Curious: More on UIGestureRecognizer  260
+    Silver Challenge: Mysterious Lines  261
+    Gold Challenge: Speed and Size  261
+    Mega-Gold Challenge: Colors  261
+14 Debugging Tools  263
+    Gauges  263
+    Instruments  265
+        Allocations instrument  266
+        Time Profiler instrument  271
+        Leaks instrument  274
+    Static Analyzer  276
+    Projects, Targets, and Build Settings  278
+        Build configurations  280
+        Changing a build setting  281
+15 Introduction to Auto Layout  283
+    Universalizing Homepwner  283
+    The Auto Layout System  285
+        Alignment rectangle and layout attributes  286
+        Constraints  287
+    Adding Constraints in Interface Builder  289
+        Adding more constraints  293
+        Adding even more constraints  296
+        Priorities  298
+    Debugging Constraints  298
+        Ambiguous layout  299
+        Unsatisfiable constraints  303
+        Misplaced views  304
+    Bronze Challenge: Practice Makes Perfect  306
+    Silver Challenge: Universalize Quiz  307
+    For the More Curious: Debugging Using the Auto Layout Trace  307
+    For the More Curious: Multiple XIB Files  308
+16 Auto Layout: Programmatic Constraints  309
+    Visual Format Language  310
+    Creating Constraints  311
+    Adding Constraints  312
+    Intrinsic Content Size  315
+    The Other Way  316
+    For the More Curious: NSAutoresizingMaskLayoutConstraint  318
+17 Autorotation, Popover Controllers, and Modal View Controllers  321
+    Autorotation  321
+    Rotation Notification  324
+    UIPopoverController  326
+    More Modal View Controllers  329
+        Dismissing modal view controllers  332
+        Modal view controller styles  334
+        Completion blocks  335
+        Modal view controller transitions  337
+    Thread-Safe Singletons  337
+    Bronze Challenge: Another Thread-Safe Singleton  339
+    Gold Challenge: Popover Appearance  339
+    For the More Curious: Bitmasks  339
+    For the More Curious: View Controller Relationships  340
+        Parent-child relationships  341
+        Presenting-presenter relationships  342
+        Inter-family relationships  342
+18 Saving, Loading, and Application States  345
+    Archiving  345
+    Application Sandbox  348
+        Constructing a file path  349
+    NSKeyedArchiver and NSKeyedUnarchiver  350
+    Application States and Transitions  353
+    Writing to the Filesystem with NSData  356
+    NSNotificationCenter and Low-Memory Warnings  358
+        More on NSNotificationCenter  360
+    Model-View-Controller-Store Design Pattern  361
+    Bronze Challenge: PNG  361
+    For the More Curious: Application State Transitions  361
+    For the More Curious: Reading and Writing to the Filesystem  362
+    For the More Curious: The Application Bundle  365
+19 Subclassing UITableViewCell  369
+    Creating BNRItemCell  369
+        Configuring a UITableViewCell subclass’s interface  371
+        Exposing the properties of BNRItemCell  372
+        Using BNRItemCell  372
+        Constraints for BNRItemCell  374
+    Image Manipulation  377
+    Relaying Actions from UITableViewCells  380
+        Adding a block to the cell subclass  382
+        Presenting the image in a popover controller  383
+    Variable Capturing  385
+    Bronze Challenge: Color Coding  386
+    Gold Challenge: Zooming  387
+    For the More Curious: UICollectionView  387
+20 Dynamic Type  389
+    Using Preferred Fonts  390
+    Responding to User Changes  392
+    Updating Auto Layout  393
+        Content Hugging and Compression Resistance Priorities revisited  393
+    Determining the User’s Preferred Text Size  395
+    Updating BNRItemCell  397
+        Constraint outlets  398
+        Placeholder constraints  399
+21 Web Services and UIWebView  403
+    Web Services  404
+        Starting the Nerdfeed application  405
+        NSURL, NSURLRequest, NSURLSession, and NSURLSessionTask  406
+        Formatting URLs and requests  407
+        Working with NSURLSession  408
+        JSON data  409
+        Parsing JSON data  410
+        The main thread  412
+    UIWebView  413
+    Credentials  416
+    Silver Challenge: More UIWebView  417
+    Gold Challenge: Upcoming Courses  417
+    For the More Curious: The Request Body  417
+22 UISplitViewController  421
+    Splitting Up Nerdfeed  422
+    Displaying the Master View Controller in Portrait Mode  425
+    Universalizing Nerdfeed  428
+23 Core Data  431
+    Object-Relational Mapping  431
+    Moving Homepwner to Core Data  431
+        The model file  431
+        NSManagedObject and subclasses  437
+        Updating BNRItemStore  439
+        Adding BNRAssetTypes to Homepwner  444
+    More About SQL  449
+    Faults  450
+    Trade-offs of Persistence Mechanisms  453
+    Bronze Challenge: Assets on the iPad  453
+    Silver Challenge: New Asset Types  453
+    Gold Challenge: Showing Assets of a Type  453
+24 State Restoration  455
+    How State Restoration Works  455
+    Opting In to State Restoration  456
+    Restoration Identifiers and Classes  457
+    State Restoration Life Cycle  459
+    Restoring View Controllers  461
+    Encoding Relevant Data  463
+    Saving View States  465
+    Silver Challenge: Another Application  467
+    For the More Curious: Controlling Snapshots  467
+25 Localization  469
+    Internationalization Using NSNumberFormat  470
+    Localizing Resources  473
+    NSLocalizedString() and Strings Tables  477
+    Bronze Challenge: Another Localization  480
+    For the More Curious: NSBundle’s Role in Internationalization  480
+    For the More Curious: Localizing XIB files without Base Internationalization  481
+26 NSUserDefaults  483
+    NSUserDefaults  483
+        Register the factory settings  484 
+        Read a preference  485 
+        Change a preference  485
+    Settings Bundle  487 
+        Editing the Rootplist  488 
+        Localized Rootstrings  489
+27 Controlling Animations  491 
+    Basic Animations  491 
+        Timing functions  493
+    Keyframe Animations  494 
+    Animation Completion  496 
+    Spring Animations  497 
+    Silver Challenge: Improved Quiz  498
+28 UIStoryboard  499 
+    Creating a Storyboard  499 
+    UITableViewControllers in Storyboards  503 
+    Segues  506 
+    Enabling Color Changes  511 
+    Passing Data Around  513 
+    More on Storyboards  519 
+    For the More Curious: State Restoration  520
+29 Afterword  523 
+    What to do Next  523 
+    Shameless Plugs  523
+Index  525
